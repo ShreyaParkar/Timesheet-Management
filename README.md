@@ -32,7 +32,7 @@ A clean and modern timesheet tracking application built with **Next.js 15**, all
 Setup Instructions:
 
 Clone the repo:
-git clone https://github.com/your-username/ticktock-timesheets.git
+git clone https://github.com/ShreyaParkar/Timesheet-Management.git
 cd ticktock-timesheets
 
 Install dependencies:
