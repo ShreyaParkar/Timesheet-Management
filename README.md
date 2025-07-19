@@ -18,15 +18,17 @@ A clean and modern timesheet tracking application built with **Next.js 15**, all
 
 ## 🧰 Tech Stack
 
-| Framework/Library     | Purpose                             |
-|------------------------|-------------------------------------|
-| **Next.js 15**         | App framework (Pages & API Routes) |
-| **React**              | Frontend component logic            |
-| **TypeScript**         | Type safety                         |
-| **TailwindCSS**        | Styling & layout                    |
-| **NextAuth**           | Authentication (Credentials)       |
-| **shadcn/ui**          | UI components (Button, Dialog, etc)|
-| **date-fns**           | Date formatting/utility             |
+| Framework/Library         | Purpose                                      |
+|---------------------------|----------------------------------------------|
+| **Next.js 15**            | App framework (Pages & API Routes)           |
+| **React**                 | Frontend component logic                     |
+| **TypeScript**            | Type safety                                  |
+| **TailwindCSS**           | Styling & layout                             |
+| **NextAuth**              | Authentication (Credentials)                |
+| **shadcn/ui**             | UI components (Button, Dialog, etc)          |
+| **date-fns**              | Date formatting/utility                      |
+| **Lucide Icons**          | Icon library for consistent UI visuals       |
+| **React Hook Form & Zod** | Form handling and schema validation          |
 
 ---
 ## 🛠️ Setup Instructions
