@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { Clock, Calendar, Eye } from 'lucide-react'
+import { Clock, Eye } from 'lucide-react'
 
 export type Timesheet = {
   id: string
