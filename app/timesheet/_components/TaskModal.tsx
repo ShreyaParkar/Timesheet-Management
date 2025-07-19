@@ -143,7 +143,7 @@ export default function TaskModal({ trigger, initialData, onSave }: TaskModalPro
         <DialogFooter className="pt-4">
           <Button 
             onClick={handleSubmit}
-            className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600 text-white"
+            className="bg-blue-500 hover:bg-blue-600 text-white"
           >
             {initialData ? "Update Task" : "Add Task"}
           </Button>

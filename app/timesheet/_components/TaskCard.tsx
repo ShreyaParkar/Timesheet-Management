@@ -115,7 +115,7 @@ export default function TaskCard({
               <DialogFooter className="mt-4 flex justify-end gap-3">
                 <Button
                   variant="outline"
-                  className="border-gray-500 text-gray-300"
+                  className="border-gray-500 text-black"
                   onClick={() => setConfirm(false)}
                 >
                   Cancel
@@ -131,7 +131,7 @@ export default function TaskCard({
 
       {/* ✅ Update Success Modal */}
       <Dialog open={showUpdatePopup} onOpenChange={setShowUpdatePopup}>
-        <DialogContent className="bg-green-700 text-white rounded-lg text-center">
+        <DialogContent className="bg-black-700 text-white rounded-lg text-center">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold">Update Successful</DialogTitle>
             <p className="text-sm mt-2">"{task.project}" was successfully updated.</p>
