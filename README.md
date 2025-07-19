@@ -29,20 +29,31 @@ A clean and modern timesheet tracking application built with **Next.js 15**, all
 | **date-fns**           | Date formatting/utility             |
 
 ---
-Setup Instructions:
+## 🛠️ Setup Instructions
 
-Clone the repo:
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/ShreyaParkar/Timesheet-Management.git
 cd ticktock-timesheets
 
 Install dependencies:
 npm install
 
+Setup environment variables
+env.local
+NEXTAUTH_SECRET=0bvI5XOpOT33eyx2CONWQgKaumooeBUSkQFwhVpzkU8=
+NEXTAUTH_URL=http://localhost:3000
+
+
 Run the app:
 npm run dev
 
 Login with mock credentials:
 Email: shrey@example.com
-Password: shrey123
+Password: 1234567890
 
-total time spent 30hr
+⏳ Time Spent
+Total time spent on building this project: 35 hours
+
+
