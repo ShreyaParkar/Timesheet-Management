@@ -8,15 +8,7 @@ import { Button } from "@/components/ui/button";
 import TaskModal from "./TaskModal";
 import TaskCard from "./TaskCard";
 import { useToast } from "@/hooks/use-toast";
-
-type Task = {
-  id: string;
-  date: string;
-  project: string;
-  type: string;
-  description: string;
-  hours: number;
-};
+import { Task } from "@/lib/mockdata";
 
 export default function DayCard({
   date,
@@ -34,20 +26,20 @@ export default function DayCard({
   onDelete: () => void;
 }) {
   const totalHours = tasks.reduce((a, t) => a + (t.hours || 0), 0);
-  const { toast } = useToast(); // ✅ use the toast
+  const { toast } = useToast();
 
-  async function handleAdd(task: Task) {
-    await fetch(`/api/entries/${weekId}`, {
+  function handleAdd(task: Task) {
+    fetch(`/api/entries/${weekId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(task),
-    });
-    onAdd();
-
-    toast({
-      description: "Task added successfully.",
-      className: "bg-black text-white bottom-4 fixed left-1/2 transform -translate-x-1/2 z-50",
-      duration: 2500,
+    }).then(() => {
+      onAdd();
+      toast({
+        description: "Task added successfully.",
+        className: "bg-black text-white bottom-4 fixed left-1/2 transform -translate-x-1/2 z-50",
+        duration: 2500,
+      });
     });
   }
 

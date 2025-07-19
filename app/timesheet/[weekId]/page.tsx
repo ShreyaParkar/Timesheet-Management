@@ -6,8 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WeekHeader from "../_components/WeekHeader";
 import DayCard from "../_components/DayCard";
-
-type Task = {/* ... same as before ... */};
+import { Task } from "@/lib/mockdata";
 
 export default function WeekPage() {
   const { weekId } = useParams();
@@ -33,11 +32,13 @@ export default function WeekPage() {
     return a;
   }, {});
 
+  const weekNumber = weekId ? parseInt((weekId as string).split("-")[1]) : 0;
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
       <main className="flex-1 container max-w-5xl mx-auto px-4 py-10 space-y-6">
-        <WeekHeader totalHours={totalHours} />
+        <WeekHeader weekNumber={weekNumber} totalHours={totalHours} />
         <div className="space-y-4">
           {Object.entries(byDate).map(([date, tasks]) => (
             <DayCard

@@ -9,7 +9,7 @@ export type Timesheet = {
 };
 
 export type Task = {
-  id: string;
+  id?: string; // <-- Make id optional
   date: string;
   project: string;
   type: string;

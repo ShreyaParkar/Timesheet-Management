@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Trash2, Edit } from "lucide-react";
 import TaskModal from "./TaskModal";
 import { useToast } from "@/hooks/use-toast";
+import { Task } from "@/lib/mockdata";
 
 export default function TaskCard({
   task,
@@ -36,12 +37,12 @@ export default function TaskCard({
     });
 
     toast({
-    title: "Updated!",
-    description: `"${updated.project}" updated successfully.`,
-    duration: 3000,
-    className:
-      "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 bg-black text-white text-sm rounded-md shadow-md border border-neutral-700",
-  });
+      title: "Updated!",
+      description: `"${updated.project}" updated successfully.`,
+      duration: 3000,
+      className:
+        "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 bg-gradient-to-r from-blue-700 to-blue-500 text-white text-base rounded-xl shadow-lg border border-blue-300",
+    });
 
     setShowUpdatePopup(true); // ✅ Show modal
     setTimeout(() => setShowUpdatePopup(false), 2000); // Auto close after 2s
@@ -60,6 +61,9 @@ export default function TaskCard({
       title: "Deleted!",
       description: `"${task.project}" removed.`,
       variant: "destructive",
+      duration: 3000,
+      className:
+        "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-6 py-3 bg-gradient-to-r from-red-700 to-red-500 text-white text-base rounded-xl shadow-lg border border-red-300",
     });
 
     onDelete();
